@@ -7,32 +7,32 @@ public class InputManager : Singleton<InputManager> {
 
 	public float fireRate = 0.2f;
 
-//	private ShipWeapons currentWeapons;
+	private ShipWeapons currentWeapons;
 	private bool isFiring = false;
 
-//	public void SetWeapons(ShipWeapons weapons) {
-//		this.currentWeapons = weapons;
-//	}
+	public void SetWeapons(ShipWeapons weapons) {
+		this.currentWeapons = weapons;
+	}
 
-//	public void RemoveWeapons(ShipWeapons weapons) {
-//		if (this.currentWeapons == weapons) {
-//			this.currentWeapons = null;
-//		}
-//	}
+	public void RemoveWeapons(ShipWeapons weapons) {
+		if (this.currentWeapons == weapons) {
+			this.currentWeapons = null;
+		}
+	}
 
-//	public void StartFiring() {
-//		StartCoroutine(FireWeapons());
-//	}
+	public void StartFiring() {
+		StartCoroutine(FireWeapons());
+	}
 
-//	IEnumerator FireWeapons() {
-//		isFiring = true;
-//		while (isFiring) {
-//			if (this.currentWeapons != null) {
-//				currentWeapons.Fire();
-//			}
-//			yield return new WaitForSeconds(fireRate);
-//		}
-//	}
+	IEnumerator FireWeapons() {
+		isFiring = true;
+		while (isFiring) {
+			if (this.currentWeapons != null) {
+				currentWeapons.Fire();
+			}
+			yield return new WaitForSeconds(fireRate);
+		}
+	}
 
 	public void StopFiring() {
 		isFiring = false;
