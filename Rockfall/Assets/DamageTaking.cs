@@ -22,9 +22,9 @@ public class DamageTaking : MonoBehaviour {
 					transform.position, transform.rotation);
 			}
 
-//			if (gameOverOnDestroyed == true) {
-//				GameManager.instance.GameOver();
-//			}
+			if (gameOverOnDestroyed == true) {
+				GameManager.instance.GameOver();
+			}
 
 		}
 	}
